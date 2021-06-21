@@ -1,0 +1,43 @@
+{
+  "name": "zoom_timetable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "node": "^14.14.0",
+    "shell": "^0.5.0"
+  },
+  "devDependencies": {
+    "electron": "^10.1.4",
+    "electron-builder": "^22.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "deploy": "electron-builder --windows nsis:ia32"
+  },
+  "author": "",
+  "license": "MIT",
+  "build": {
+    "productName": "dimigo_timetable",
+    "appId": "com.dimigo.timetable",
+    "asar": true,
+    "protocols": {
+      "name": "dimigo_timetable",
+      "schemes": [
+        "dimigo_timetable_"
+      ]
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "./resources/installer/Icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
