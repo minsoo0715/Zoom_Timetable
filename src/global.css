@@ -60,7 +60,7 @@ tr.time { border-radius: var(--round-corner) 0 0 var(--round-corner); }
 
 @font-face {
     font-family: 'SCDream';
-    src: url('SCDream4.otf');
+    src: url('../font/SCDream4.otf');
 }
 
 
